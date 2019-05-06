@@ -3,9 +3,9 @@
 #include <iostream>
 using namespace std;
 //constructors and destructor
-Person::Person(const char* name, short year, char sex, long phone) {
-	this->name=new char[strlen(name)+1];
-	strcpy(this->name, name);
+Person::Person(const char* first,const char* second,
+	short year, char sex, long phone) {
+	name = new Person(first,second);
 	yearOfBirth = year;
 	this->sex = sex;
 	phoneNumber = phone;
@@ -20,6 +20,7 @@ Person::Person(const Person &prs) {
 */
 Person::~Person() {
 	cout << "~~~~~Person()~~~  " << (int)this << endl;
+	
 }
 //setters
 void Person::setName(const char *name) {
@@ -50,11 +51,14 @@ long Person::getPhoneNumber() {
 }
 Person Person::getSetPerson(Person prsn) {
 	cout << "<first line in function, next return Person>\n";
-	cout << "name: " << prsn.getName() << '\t' << (int)prsn.getName() << endl;
-	//если закоментить конструктор копирования то name копии будет указывать
-	// на ту же область памяти что и name объекта в main
-	prsn.setName("Henry");
+	
+		
 	return prsn;
 }
+Name::Name(const char* first, const char* second) {
+	this->first = new char[strlen(first)];
+}
+Name::~Name() {
 
+}
 

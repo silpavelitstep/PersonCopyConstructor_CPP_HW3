@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 	{
 		cout << "<new obj Person in stack>\n";
-		Person prsn("Paul",1983,'m',123456789);
+		Person prsn("Name","Second Name",1983,'m',123456789);
 		cout << "name: " <<prsn.getName()<<'\t'<< (int)prsn.getName() << endl;
 		cout << "<call func(Person)>\n";
 		prsn.getSetPerson(prsn);
