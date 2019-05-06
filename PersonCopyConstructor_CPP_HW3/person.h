@@ -6,21 +6,21 @@ class Person {
 	char *name;//person name
 	short yearOfBirth;
 	char sex;
-	char *phoneNumber;//" f.e. +7(123)456-78-90"
+	long phoneNumber;
 public:
-	Person();
-	Person(const Person &prs);
+	Person(const char*,short,char,long);
+	//Person(const Person &prs);
 	~Person();
 	//setters
-	void setName(char *name);
+	void setName(const char *name);
 	void setYearOfBirth(short year);
 	void setSex(char sex);
-	void setPhoneNumber(char* phoneNumber);
+	void setPhoneNumber(long phoneNumber);
 	//getters
 	char* getName();
 	short getYearOfBirth();
 	char getSex();
-	char* getPhoneNumber();
+	long getPhoneNumber();
 	Person getSetPerson(Person prsn);
 };
 
