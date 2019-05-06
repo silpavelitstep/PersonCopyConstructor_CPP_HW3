@@ -5,9 +5,11 @@
 //конструктора копии
 class Name {
 	char *first;
-	char *second;
+	
 public:
-	Name(const char* first, const char* second);
+	const char* getFirst();
+	void setFirst(const char*);
+	Name(const char* first);
 	~Name();
 };
 //main work class
@@ -17,20 +19,21 @@ class Person {
 	char sex;
 	long phoneNumber;
 public:
-	Person(const char*, const char*,short,char,long);
-	//Person(const Person &prs);
+	Person(const char*,short,char,long);
+	Person(const Person &prs);
 	~Person();
 	//setters
-	void setName(Name);
+	void setName(const char *name);
 	void setYearOfBirth(short year);
 	void setSex(char sex);
 	void setPhoneNumber(long phoneNumber);
 	//getters
-	Name getName();
+	const char* getName();
+	Name *getPointerToName();
 	short getYearOfBirth();
 	char getSex();
 	long getPhoneNumber();
-	Person getSetPerson(Person prsn);
+	Person func(Person prsn);
 };
 
 #endif PERSON_H
