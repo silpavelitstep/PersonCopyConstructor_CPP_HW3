@@ -21,9 +21,15 @@
     <ClCompile Include="person.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="test_set_get.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="person.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="test_set_get.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "person.h"
+#include "test_set_get.h"
 using namespace std;
 int main() {
 	{
@@ -20,6 +21,9 @@ int main() {
 		cout << "name: " << prsn.getName() << endl;
 		cout << "pointer to Name: " << (int)prsn.getPointerToName() << endl;
 	}
+	//Test get and set metods
+	Person_test newTest;
+	newTest.exeAllTest();
 	system("pause");
 	return 0;
 }
